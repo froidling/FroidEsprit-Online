@@ -1,4 +1,3 @@
-
 *,
 *::before,
 *::after {
@@ -31,7 +30,6 @@ Emergency Debug Border
 **/
 .container {
     display: grid;
-    grid-gap: 20px;
     grid-template-columns: 300 minmax(400px, 1fr) 200px;
     grid-template-areas:
         "header header header"
@@ -39,7 +37,7 @@ Emergency Debug Border
         "footer footer footer";
     max-width: 1440px;
     margin: 0 auto;
-    align-items: start;
+    align-items: start end;
 }
 
 header {
@@ -55,10 +53,10 @@ header {
     text-align: center;
     background-color: #fff;
     padding: 10px;
-    border: 2.5px solid #333;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 
     #bio img {
-        max-width: 100%;
         height: auto;
         width: 100%;
         display: block;
@@ -66,25 +64,49 @@ header {
     }
 
     nav {
-        display: flex;
+        display: flex block;
         flex-direction: column;
         align-items: center;
+        margin: 0 auto;
+        width: 100%;
 
-        a {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.2);
-            color: white;
-            text-decoration: none;
-            border-radius: 15px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            text-align: center;
-            font-weight: bold;
+        details {
+            width: 90%;
+            .section-title {
+                display: flex;
+                width: 100%;
+                padding: 10px;
+                background-color: rgba(0, 68, 255, 0.5);
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                border-radius: 5px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                font-weight: bold;
+                cursor: pointer;
 
-            &:hover {
-                background-color: rgb(3, 83, 83);
+                &:hover {
+                    background-color: rgb(3, 83, 83);
+                }
+            }
+
+            a {
+                display: flex;
+                width: 90%;
+                margin: auto;
+                padding: 15px;
+                background-color: rgba(0, 0, 0, 0.2);
+                color: white;
+                text-decoration: none;
+                border-radius: 15px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                text-align: center;
+                font-weight: bold;
+
+                &:hover {
+                    background-color: rgb(3, 83, 83);
+                }
             }
         }
     }
@@ -107,6 +129,7 @@ main {
     width: 100%;
     max-width: 1200px;
     text-align: center;
+
 
     article {
         border: 2px solid #333;
@@ -232,7 +255,67 @@ footer {
     color: white;
 
     text-align: center;
+
     a img {
         padding: auto;
     }
+}
+
+@media (max-width: 800px) {
+    .container {
+        grid-template:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-gap: 20px;
+
+        #sidebar-left {
+            grid-area: sidebar;
+            margin: auto;
+            width: calc(100% - 25px);
+            height: auto;
+            border: 2.5px solid #333;
+            border-radius: 5px;
+
+            nav {
+
+                details {
+                    margin: auto;
+                    width: 90%;
+                    text-align: center;
+                    padding: 5px;
+
+                    a {
+                        margin: 5px auto;
+                        width: 80%;
+                    }
+                }
+
+
+            }
+        }
+
+        #bio {
+            display: none;
+        }
+
+        .solar-widget {
+            display: none;
+        }
+    }
+
+    main {
+        margin: auto;
+        width: calc(100% - 25px);
+        border: 2.5px solid #333;
+        border-radius: 5px;
+
+        .featured-posts div {
+            width: calc(50% - 10px);
+        }
+
+    }
+
+}
 }
