@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Raspberry Pi APRS iGate Build with RTL-SDR Blog Receiver - VA7ECX</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <aside id="sidebar-left">
+            <div id="bio" class="maintext">
+                <p><b>Ethan Campbell</b> is a ham radio operator, finance student, and general technology enthusiast.
+                </p>
+                <a href="/index.html"><img src="/assets/hero.webp" alt="QSL Card" id="qsl"
+                        style="border-radius: 10px;"></a>
+                <p>My QSL Card, illustrated by <a href="https://www.instagram.com/spuddie203/">Spuddie203 on
+                        Instagram</a></p>
+            </div>
+            <nav class="navi">
+                <details open>
+                    <summary>This Site</summary>
+                    <a href="/index.html">Home</a>
+                    <a href="/about.html">About Me</a>
+                    <!-- <a href="/links.html">Links</a> -->
+                </details>
+                <details open>
+                    <summary>Blog</summary>
+                    <a href="/blog.html">Archive</a>
+                    <!-- <a href="/gallery.html">Photo Gallery</a> -->
+                </details>
+                <details open>
+                    <summary>Contact</summary>
+                    <!--<a href="/contact.html">Contact Form</a>-->
+                    <a href="https://froidesprit.atabook.org/">Guestbook</a>
+                </details>
+                <details open>
+                    <summary>Outgoing</summary>
+                    <a href="https://neocities.org/site/va7ecx">Site Profile</a>
+                    <a href="/links.html">Links</a>
+                </details>
+            </nav>
+            <div class="solar-widget">
+                <a href="https://www.hamqsl.com/solar.html"
+                    title="Click to add Solar-Terrestrial Data to your website!"><img
+                        src="https://www.hamqsl.com/solarn0nbh.php"></a>
+            </div>
+        </aside>
+        <!-- Main content for the blog post -->
+        <main>
+            <div>
+                <article>
+                    <h1>Raspberry Pi APRS iGate Build with RTL-SDR Blog Receiver</h1>
+                    <p class="meta">By Ethan | May 13, 2026</p>
+                    <p>Good afternoon, folks who stumbled upon here. I just received a new SDR receiver in the mail, and
+                        have built myself an APRS iGate with my Raspberry Pi.</p>
+                    <div class="image-container">
+                        <img src="/assets/post-assets/igate.jpg" alt="APRS iGate">
+                    </div>
+                    <p>This post is more for myself, in case I forget any details later. I found many different
+                        resources
+                        online about it, but nothing all in one place, and there are almost certainly terminal commands
+                        I'll
+                        need to reference.</p>
+                    <p>To begin with, parts. I had my old Raspberry Pi 3 Model B lying around. I used to use it for a
+                        Google
+                        AIY Voice HAT project back in the day, but the API seems to be deprecated, and I never bothered
+                        to
+                        set it up again. Second, RTL-SDR Blog V3 receiver. I went for <a
+                            href="https://www.aliexpress.com/item/32936334224.html" target="_blank">the kit off
+                            Aliexpress</a>, apparently the shop is official. The V4 is out and apparently better with
+                        heat
+                        management, but it doesn't come with the kit with the antennas and window mount.</p>
+                    <p>After installing the Dire Wolf and RTL-SDR software, I met my first road block. Dire Wolf failed
+                        to
+                        recognize the RTL-SDR device.</p>
+                    <div class="image-container">
+                        <img src="/assets/post-assets/direwolf error.png" alt="Dire Wolf Error">
+                    </div>
+                    <p>So, I set it up again on my Linux laptop. Configured `direwolf.conf`, installed `rtl-sdr`, ran
+                        `direwolf`. Worked flawlessly. I was even able to log into APRSC and see the expected results. I
+                        actually still don't know why it worked here but not on my Raspberry Pi. Does PC have more
+                        robust
+                        conversion? Was it because of other software I had installed? Perhaps someone smarter than me
+                        can
+                        enlighten me.</p>
+                    <p>As it happened, it turned out to be a misunderstanding involving what RTL-SDR even does. It's a
+                        data
+                        input, not an audio device. Hence why running `lsusb` showed the device, but not `arecord`, and
+                        addtionally why `rtl-test` worked as well. Browsing a few more tutorials and documentation I
+                        forgot
+                        to bookmark, I found that running `rtl_fm -f 144.39M -M fm -s 24000 - | direwolf -c sdr.conf -r
+                        24000 -D 1 -` did the trick. Obligatory check your settings to see if this is relevant to you.
+                    </p>
+                    <div class="image-container">
+                        <img src="/assets/post-assets/terminal readout.png"
+                            alt="Terminal Readout showing lsub and arecord output">
+                    </div>
+                    <p>After solving this wrinkle, I ran into... another wrinkle. I could log into APRS-C, but it listed
+                        my
+                        user as 'xxx' and marked me as 'unverified'.</p>
+                    <div class="image-container">
+                        <img src="/assets/post-assets/second direwolf error.png"
+                            alt="direwolf error showing unverified user">
+                    </div>
+                    <p>This was more unusual, since I made sure `direwolf.conf` was properly configured, but then I
+                        looked
+                        at the command I had entered again, it made reference to another file, `sdr.conf`. I had to set
+                        up
+                        my APRS login information there as well. That's new. I would assume it was generated after the
+                        first
+                        time I failed to log into Direwolf? I'm again unsure, someone else can let me know.</p>
+                    <p>After all that, I was finally getting everything working, my station is properly showing up on
+                        the
+                        APRSC dashboard. It's not popping up on the APRS.fi map though, that's another problem I need to
+                        solve. I set up my coordinates in `direwolf.conf`, so I'm going to have to set that up another
+                        day,
+                        once I figure out how.</p>
+                    <p>Software set up, the last thing to do was put it in place. I decided on the lower south window of
+                        my
+                        home; the upper window area behind the curtains had a metal bug guard that would act as an
+                        unfortunate faraday cage. A lower window isn't optimal either, but it seems to be working just
+                        fine,
+                        for now at least.</p>
+                    <p>That's enough of that for now. The iGate is working as normal and is receiving packets. The only
+                        other update I have is, my domain name is now live! Note that the site is now <a
+                            href="https://va7ecx.ca">va7ecx.ca</a>, instead of a neocities subdomain. It has been a long
+                        time since I've used a domain name, and it's the first time I've got a .ca and not a .fun or
+                        .site
+                        or .online. It's also the first time I went with Porkbun instead of Namecheap.</p>
+                    <p>I now take my leave, and shall update again next time I do something interesting.</p>
+                    <div class="image-container">
+                        <img src="/assets/post-assets/raspberry-pi-with-rtl-sdr.jpg" alt="Raspberry Pi with RTL-SDR">
+                        <span>Got system all set up.</span>
+                    </div>
+                    <a href="../2026.html">Back to 2026</a>
+                    <a href="/blog.html">Back to Blog</a>
+                </div>
+            </article>
+        </main>
+    </div>
+</body>
+
+</html>

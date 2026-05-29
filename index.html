@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VA7ECX Home</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    </style>
+    <script src=""></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <div class="container">
+
+        <aside id="sidebar-left">
+            <div id="bio">
+                <p><b>Ethan Campbell</b> is a ham radio operator, finance student, and general technology enthusiast.
+                </p>
+                <a href="/index.html"><img src="/assets/hero.webp" alt="QSL Card" id="qsl"
+                        style="border-radius: 10px;"></a>
+                <p>My QSL Card, illustrated by <a href="https://www.instagram.com/spuddie203/">Spuddie203 on
+                        Instagram</a></p>
+            </div>
+            <nav>
+                <details open>
+                    <summary>This Site</summary>
+                    <a href="/index.html">Home</a>
+                    <a href="/about.html">About Me</a>
+                </details>
+                <details open>
+                    <summary>Blog</summary>
+                    <a href="/blog.html">Archive</a>
+                    <!--<a href="/gallery.html">Photo Gallery</a>-->
+                </details>
+                <details open>
+                    <summary>Contact</summary>
+                    <!--<a href="/contact.html">Contact Form</a>-->
+                    <a href="https://froidesprit.atabook.org/">Guestbook</a>
+                </details>
+                <details open>
+                    <summary>Outgoing</summary>
+                    <a href="https://neocities.org/site/va7ecx">Site Profile</a>
+                    <a href="/links.html">Links</a>
+                </details>
+            </nav>
+            <div class="solar-widget">
+                <a href="https://www.hamqsl.com/solar.html"
+                    title="Click to add Solar-Terrestrial Data to your website!"><img
+                        src="https://www.hamqsl.com/solarn0nbh.php"></a>
+            </div>
+        </aside>
+        <main>
+            <div>
+                <!-- Main text section -->
+                <div class="main-text">
+                    <article id="welcome-message">
+                        <h1>Hello, I'm Ethan</h1>
+                        <h2>I'm a person who does things on the internet.</h2>
+                        <h3>I don't exactly know what to call it, but I do things.</h3>
+                        <p>You may also find me called VA7ECX (on the airwaves) and FroidEsprit (pretty much everywhere
+                            else).</p>
+                        <p>I'm a ham radio operator and a vocal synth enjoyer. This will be a blog where I document
+                            software
+                            projects, radio projects, and other interests.</p>
+                        <p>For some reason I thought it would be a good idea to make a site from scratch instead of
+                            using a
+                            static website generator or a CSS template, so this will look ugly for a while. Bear with me
+                            for
+                            a bit!</p>
+                        <p>Yes, I am using the VS Code extention with the API. Yes, I am testing in prod. If you know
+                            what
+                            that means, you get it. If you don't, just know there will be jank.</p>
+                        <h3>Learn more about me <a href="about.html">here</a>!</h3>
+                        <p>Thanks for coming to my website.</p>
+                    </article>
+                    <hr style="height: 4px; background-color: #333; border: none; margin: 40px 0; border-radius: 10px;">
+                    <article id="recent-posts">
+                        <h1>Recent Blog Posts</h1>
+                        <p>Here are some of my recent blog posts. Click the images to read!</p>
+                        <div class="featured-posts">
+                            <div>
+                                <a href="/blog/2026/may/05-13-2026.html"><img src="/assets/thumbnails/2026-may-13.jpg"
+                                        alt="Raspberry Pi APRS iGate Build with RTL-SDR Blog Receiver"></a>
+                                <span>Raspberry Pi iGate</span>
+                            </div>
+                            <div>
+                                <a href="/blog/2026/may/05-11-2026.html"><img src="/assets/thumbnails/2026-may-11.jpg"
+                                        alt="Welcome to My Website!"></a>
+                                <span>Welcome!</span>
+                            </div>
+                        </div>
+                    </article>
+                    <hr style="height: 4px; background-color: #333; border: none; margin: 40px 0; border-radius: 10px;">
+                    <article id="site updates">
+                        <h2>Site Updates</h2>
+                        <div class="changelog">
+                            <ul class="update-list">
+                                <li>
+                                    <time datetime="2026-05-28">05-28-2026</time>
+                                    <br>
+                                    <p>Completely rebuilt my site's CSS from the ground up after following tutorials on
+                                        <a href="https://petrapixel.neocities.org/">PetraPixel's</a> site. Learned how
+                                        to use Grid in place of FlexBox for layouts. The codebase is now easier to
+                                        maintain, which means I'll be less hesitant to update. Mobile is still borked,
+                                        because I haven't built that layout yet.</p>
+                                </li>
+                                <li>
+                                    <time datetime="2026-05-18">05-18-2026</time>
+                                    <br>
+                                    <p>Adding more links to my <a href="/links">links</a> page, messing with the
+                                        sidebar's colors. I'm not loving the teal on image background. Mobile is borked.
+                                        Decided to separate the blog by year and not month. Don't use the contact form,
+                                        it works but I'm not liking the theming there either.</p>
+                                </li>
+                                <li>
+                                    <time datetime="2026-05-16">05-16-2026</time>
+                                    <br>
+                                    <p>Added a solar widget to the sidebar, began making a links page. Going to a
+                                        ballgame today, will finish the page tomorrow.</p>
+                                </li>
+                                <li>
+                                    <time datetime="2026-05-15">05-15-2026</time>
+                                    <br>
+                                    <p>Updated the site design again and added a changelog to the main page. Took heavy
+                                        inspiration from <a href="https://nomnomnami.com/">Nomnomnami</a>.</p>
+                                </li>
+                                <li>
+                                    <time datetime="2026-05-14">05-14-2026</time>
+                                    <br>
+                                    <p>Updated the site design, cleaned up filestructure.</p>
+                                </li>
+                                <li>
+                                    <time datetime="2026-05-13">05-13-2026</time>
+                                    <br>
+                                    <p>Created the site and wrote my first blog post.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+        </main>
+        <footer>
+            <span>Website layout inspired by<a href="https://petrapixel.neocities.org/" target="_blank"><img
+                        src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/assets/img/linkback.gif"
+                        alt="petrapixel"></a> tutorials!</span>
+        </footer>
+    </div>
+</body>
+
+</html>
