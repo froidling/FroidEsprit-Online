@@ -386,5 +386,7 @@ footer {
         }
 
     }
-
+    #sidebar-right {
+        display: none;
+    }
 }
