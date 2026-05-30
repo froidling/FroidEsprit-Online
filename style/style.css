@@ -48,6 +48,12 @@ header {
     grid-area: header;
 }
 
+aside {
+    background-image: url(/assets/backgrounds/gun-metal.png);
+    background-repeat: repeat;
+    background-color: #1a1c1a;
+}
+
 #sidebar-left {
     grid-area: sidebar-left;
     width: 300px;
@@ -55,9 +61,6 @@ header {
     flex-direction: column;
     gap: 20px;
     text-align: center;
-    background-image: url(/assets/backgrounds/gun-metal.png);
-    background-repeat: repeat;
-    background-color: #1a1c1a;
     padding: 10px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -135,7 +138,47 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+div.aside-box {
+    position: relative;
+    display: block;
+    margin-top: 30px;
+    padding: 1em;
+    border: 1px dashed #3b7a57;
+    background-color: #1a1c1a;
+    background-image: url(/assets/backgrounds/gun-metal.png);
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+
+    .aside-box__heading {
+        text-align: right;
+        position: absolute;
+        top: -25px;
+        right: 1px;
+        line-height: 1;
+        padding: 0 0.5em;
+        user-select: none;
+        border-radius: 10px;
+        background-color: #1a1c1a;
+        background-image: url(/assets/backgrounds/gun-metal.png);
+        z-index: 1;
+        font-size: small;
+        p {
+            color: #3b7a57;
+        }
+    }
+}
+
+div.status {
+    display: flex;
+    flex-direction: row;
 }
 
 main {
