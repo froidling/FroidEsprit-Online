@@ -412,6 +412,9 @@ footer {
         .solar-widget {
             display: none;
         }
+        .status {
+            display: none;
+        }
     }
 
     main {
