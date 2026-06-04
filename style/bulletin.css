@@ -55,7 +55,7 @@ div.back {
 
     a,
     a:visited {
-       color: #fff;
+        color: #fff;
         margin: auto;
     }
 }
@@ -111,8 +111,49 @@ div.todo {
         opacity: 20%;
         color: #fff;
     }
+
     h4 {
         font-size: 20px;
     }
-    
+
+}
+
+@media (max-width: 800px) {
+    .container {
+        grid-template-areas:
+            "aside"
+            "bulletin";
+        grid-gap: 20px;
+
+        div.back {
+            grid-area: aside;
+            width: 100%;
+            height: auto;
+
+        }
+
+        div.todo {
+            grid-area: aside;
+            width: 100%;
+            margin: auto;
+            height: auto;
+            margin-top: 40px;
+            margin-left: 60px;
+        }
+
+        main {
+            grid-area: bulletin;
+            margin: auto;
+        }
+
+        div.bulletin {
+            width: 100%;
+            margin-top: 40px;
+            margin-left: 60px;
+        }
+    }
+
+
+
+
 }

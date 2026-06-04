@@ -352,6 +352,8 @@ main {
 
 footer {
     display: flex;
+    flex-direction: row;
+
     grid-area: footer;
     justify-content: space-between;
     margin-top: 1em;
@@ -361,14 +363,9 @@ footer {
     z-index: 9999;
     
 
-    div.footer-left {
-        align-items: center;
-    }
-
-    div.footer-right {
-        align-items: center;
-    }
+    
 }
+
 
 @media (max-width: 800px) {
     .container {
