@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Share+Tech+Mono&display=swap');
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-size: auto;
+    background-image: url(/assets/backgrounds/black-linen.png);
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-color: #2a4d38;
+    font-family: 'JetBrains Mono', Arial, sans-serif;
+    width: 250px;
+    height: 250px;
+    display: block;
+
+
+}
+
+div.garden {
+    display: block;
+    background-image: url(/assets/backgrounds/gun-metal.png);
+    background-repeat: repeat;
+    background-color: #1a1c1a;
+    margin: auto;
+}
+
+h1 {
+    font-family: "Share Tech Mono", Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+h2 {
+    font-family: 'JetBrains Mono', 'Arial Narrow', Arial, sans-serif;
+}
+
+span {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-image: url(/assets/backgrounds/gun-metal.png);
+    background-repeat: repeat;
+    background-color: #1a1c1a;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 10px;
+
+    opacity: 0;
+    transform: translateY(100px);
+    transition: transform 0.4s ease, opacity 0.5s ease;
+}
+
+&:hover span {
+    opacity: 1;
+    transform: none;
+}

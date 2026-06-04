@@ -34,7 +34,7 @@ Emergency Debug Border
 **/
 .container {
     display: grid;
-    grid-template-columns: 300 minmax(400px, 1fr) 200px;
+    grid-template-columns: 300px minmax(400px, 1fr) 200px;
     grid-template-areas:
         "header header header"
         "sidebar-left main sidebar-right"
@@ -409,7 +409,7 @@ footer {
             display: none;
         }
 
-        .solar-widget {
+        .webgarden-widget {
             display: none;
         }
         .status {

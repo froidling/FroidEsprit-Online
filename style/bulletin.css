@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Share+Tech+Mono&display=swap');
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-size: auto;
+    background-image: url(/assets/backgrounds/cardboard.png);
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-color: #732e00;
+    font-family: 'JetBrains Mono', Arial, sans-serif;
+    display: block;
+
+    h1,
+    h2 {
+        font-family: "Share Tech Mono", Arial, Helvetica, sans-serif;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 400px minmax(500px, 1fr);
+    grid-template-areas:
+        "aside bulletin"
+        "aside bulletin";
+    max-width: 1440px;
+    margin: 0 auto;
+    align-items: start end;
+}
+
+div.back {
+    grid-area: aside;
+    display: block;
+
+
+    height: 50px;
+    width: 70px;
+
+    margin-top: 40px;
+    margin-left: 60px;
+
+    background-image: url(/assets/backgrounds/black-linen.png);
+    background-repeat: repeat;
+    background-color: #2a4d38;
+
+    text-align: center;
+
+    a,
+    a:visited {
+       color: #fff;
+        margin: auto;
+    }
+}
+
+div.todo {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    border-radius: 20px;
+    position: relative;
+    color: #fff;
+
+    background-image: url(/assets/backgrounds/gun-metal.png);
+    background-repeat: repeat;
+    background-color: #1a1c1a;
+
+    padding: 20px;
+    margin: auto;
+    margin-top: 40px;
+    margin-left: 60px;
+
+}
+
+
+.bulletin {
+    grid-area: bulletin;
+
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-radius: 20px;
+
+    color: #fff;
+
+    background-image: url(/assets/backgrounds/gun-metal.png);
+    background-repeat: repeat;
+    background-color: #1a1c1a;
+
+    padding: 20px;
+    margin: 20px;
+
+    width: 800px;
+    height: 600px;
+    margin-top: 40px;
+
+    position: relative;
+
+    overflow-y: scroll;
+
+    hr {
+        width: 100%;
+        opacity: 20%;
+        color: #fff;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    
+}
