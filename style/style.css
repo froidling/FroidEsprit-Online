@@ -132,7 +132,6 @@ nav {
     }
 }
 
-
 #sidebar-right {
     grid-area: sidebar-right;
     width: 200px;
@@ -143,6 +142,19 @@ nav {
     padding: 10px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+#statuscafe {
+    padding: .5em;
+    
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+    font-size: 15px;
+    text-align: left;
 }
 
 div.aside-box {
@@ -316,6 +328,10 @@ main {
             padding: 5px 10px;
         }
     }
+}
+
+.maintext {
+        color: #dbd1d1;
 }
 
 /* Site update list on index */

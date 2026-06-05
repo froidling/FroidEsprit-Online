@@ -58,7 +58,7 @@
                 <textarea
                     style="width: 100%; height: 75px;"><iframe src="https://va7ecx.ca/webgarden" height="250px" width="250px" scrolling="no"></iframe></textarea>
             </div>
-            <div class="aside-box status">
+            <div class="aside-box current">
                 <div class="aside-box__heading">
                     <p>currently enjoying</p>
                     <div id="status-cafe">
@@ -68,13 +68,13 @@
                 </div>
                 <ul class="aside-currently-list">
                     <li aria-label="listening to:">
-                        <a id="song">One Small Moment of Silence - Jamie Paige</a>
+                        <a id="song">🎶 One Small Moment of Silence - Jamie Paige</a>
                     </li>
                     <li aria-label="watching:">
-                        <a id="movie">Project Hail Mary</a>
+                        <a id="movie" href="https://letterboxd.com/froidesprit/diary/">🍿 Project Hail Mary</a>
                     </li>
                     <li aria-label="reading:">
-                        <a id="book" href="https://www.sbnation.com/a/17776-football">17776 - Jon Bois</a>
+                        <a id="book" href="https://www.sbnation.com/a/17776-football">📘 17776 - Jon Bois</a>
                     </li>
                 </ul>
             </div>
@@ -119,6 +119,14 @@
                         <h2>Site Updates</h2>
                         <div class="changelog">
                             <ul class="update-list">
+                                <li>
+                                    <time datetime="2026-06-05">06-05-2026</time>
+                                    <br>
+                                    <p>Did more work on the sidebars, added a bulletin and todo list. Don't know how to
+                                        add a button for mobile to collapse the nav menu. Made a webgarden pot, add it
+                                        to your site. Working on the footer next, don't know what to put there. Added my
+                                        social media, don't really use it.</p>
+                                </li>
                                 <li>
                                     <time datetime="2026-05-30">05-30-2026</time>
                                     <br>
@@ -171,7 +179,17 @@
                 </div>
         </main>
         <aside id="sidebar-right">
-
+            <div class="aside-box status">
+                <div class="aside-box__heading">
+                    <p>status</p>
+                </div>
+                <div id="statuscafe">
+                    <div id="statuscafe-username" style="color: #3b7a57;"></div>
+                    <hr style="width: 100; opacity: 20%; color: #fff;">
+                    <div id="statuscafe-content" style="color: #3b7a57;"></div>
+                </div>
+                <script src="https://status.cafe/current-status.js?name=va7ecx" defer></script>
+            </div>
             <div class="aside-box buttons">
                 <div class="aside-box__heading">
                     <p>buttons</p>
@@ -181,6 +199,8 @@
                             src="/assets/buttons/coded-by-a-human.png"></a>
                     <img src="/assets/buttons/html-advocate.gif">
                     <img src="/assets/buttons/made-with-vscode.png">
+                    <a href="https://status.cafe"><img src="https://status.cafe/assets/button.png"
+                            alt="Status Cafe" /></a>
                 </marquee>
             </div>
             <div class="aside-box currently-online">
