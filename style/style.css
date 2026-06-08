@@ -387,13 +387,14 @@ footer {
     .container {
         grid-template:
             "header"
-            "sidebar"
+            "sidebar-left"
             "main"
+            "sidebar-right"
             "footer";
         grid-gap: 20px;
 
         #sidebar-left {
-            grid-area: sidebar;
+            grid-area: sidebar-left;
             margin: auto;
             width: calc(100% - 25px);
             height: auto;
@@ -443,6 +444,27 @@ footer {
     }
 
     #sidebar-right {
-        display: none;
+        grid-area: sidebar-right;
+
+        margin: auto;
+        width: calc(100% - 25px);
+        border: 2.5px solid #333;
+        border-radius: 5px;
+
+        .status {
+            display: none;
+        }
+        .buttons {
+            display: none;
+        }
+        
+        .currently-online {
+            display: none;
+        }
+        
+        .solar-widget {
+            display: none;
+        }
+
     }
 }
