@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    padding: auto;
+    background-attachment: fixed;
+}
+
+.container {
+    text-align: center;
+}
+
+main {
+    margin: auto;
+}
+

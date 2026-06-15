@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<script src="/script/jQuery.js"></script>
+<script>
+    $.get("/frame/sidebar-left.html", function (data) {
+        $(".sidebar-left").replaceWith(data);
+    });
+    $.get("/frame/sidebar-right.html", function (data) {
+        $(".sidebar-right").replaceWith(data);
+    });
+    $.get("/frame/footer.html", function (data) {
+        $(".footer").replaceWith(data);
+    });
+</script>
+<script>
+    // Open the Modal
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    // Close the Modal
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+
+</script>
+
+<body>
+
+    <div class="container">
+        <aside id="sidebar-left">
+            <div class="sidebar-left"></div>
+        </aside>
+        <!-- Main content for the blog post -->
+        <main>
+            <div class="maintext">
+                <h1>Gallery</h1>
+            </div>
+            <article class="space-images">
+                <h2>Space Photos</h2>
+                <div class="lightbox">
+                    <img class="gallery" src="/assets/gallery/space/cygnus.jpg" onclick="openModal();currentSlide(1)">
+                    <img class="gallery" src="/assets/gallery/space/milky way.jpg"
+                        onclick="openModal();currentSlide(2)">
+                    <img class="gallery" src="/assets/gallery/space/scutum star cloud.jpg"
+                        onclick="openModal();currentSlide(3)">
+                </div>
+
+            </article>
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="/assets/gallery/space/cygnus.jpg" alt="Cygnus Star Cloud">
+                        <div class="caption-container">
+                            <p id="caption">Cygnus Star Cloud | June 14, 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="/assets/gallery/space/milky way.jpg" alt="Milky Way with Cygnus Star Cloud">
+                        <div class="caption-container">
+                            <p id="caption">Milky Way w/ Cygnus Star Cloud | June 14, 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="/assets/gallery/space/scutum star cloud.jpg" alt="Scutum Star Cloud">
+                        <div class="caption-container">
+                            <p id="caption">Scutum Star Cloud | June 14, 2025</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </main>
+        <aside id="sidebar-right">
+            <div class="sidebar-right"></div>
+        </aside>
+        <footer>
+            <div class="footer"></div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

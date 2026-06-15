@@ -146,11 +146,13 @@ nav {
 
 #statuscafe {
     padding: .5em;
-    
+
 }
+
 #statuscafe-username {
     margin-bottom: .5em;
 }
+
 #statuscafe-content {
     margin: 0 1em 0.5em 1em;
     font-size: 15px;
@@ -243,6 +245,7 @@ main {
         border-radius: 5px;
         background-color: #dbd1d1;
         padding: 20px;
+        height: auto;
 
         h3 {
             text-align: left;
@@ -331,7 +334,7 @@ main {
 }
 
 .maintext {
-        color: #dbd1d1;
+    color: #dbd1d1;
 }
 
 /* Site update list on index */
@@ -377,11 +380,122 @@ footer {
     color: white;
     padding: 0.75em 1.5em;
     z-index: 9999;
-    
 
-    
+
+
 }
 
+
+/* Gallery */
+
+
+
+.lightbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.gallery {
+    display: block;
+    max-width: 33%;
+    padding: 5px;
+    height: auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-color: black;
+}
+
+/* Modal content */
+.modal-content {
+    position: relative;
+    background-color: #1a1c1a;
+    background-image: url("/assets/backgrounds/gun-metal.png");
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+    display: none;
+
+}
+
+.mySlides img {
+    width: 100%
+}
+
+/* Next & previous buttons */
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Caption text */
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+img.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+img.gallery {
+    transition: 0.3s;
+}
+
+.gallery:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 @media (max-width: 800px) {
     .container {
@@ -426,6 +540,7 @@ footer {
         .webgarden-widget {
             display: none;
         }
+
         .current {
             display: none;
         }
@@ -454,17 +569,32 @@ footer {
         .status {
             display: none;
         }
+
         .buttons {
             display: none;
         }
-        
+
         .currently-online {
             display: none;
         }
-        
+
         .solar-widget {
             display: none;
         }
 
+    }
+
+    .gallery {
+        
+        width: 100%;
+        padding: 5px;
+        height: auto;
+    }
+
+    .lightbox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
     }
 }
