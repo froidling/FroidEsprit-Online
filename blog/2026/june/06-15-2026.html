@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to my Website - VA7ECX</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<script src="/script/jQuery.js"></script>
+<script>
+    $.get("/frame/sidebar-left.html", function (data) {
+        $(".sidebar-left").replaceWith(data);
+    });
+    $.get("/frame/sidebar-right.html", function (data) {
+        $(".sidebar-right").replaceWith(data);
+    });
+    $.get("/frame/footer.html", function (data) {
+        $(".footer").replaceWith(data);
+    });
+</script>
+
+<body>
+    <div class="container">
+        <aside id="sidebar-left">
+            <div class="sidebar-left"></div>
+        </aside>
+
+        <!-- Main content for the blog post -->
+        <main>
+            <div>
+                <article>
+                    <h1>First-Time Astrophotography, and other updates.</h1>
+                    <p class="meta">By Ethan | June 15, 2026</p>
+                    <p>Good morning/afternoon/evening folks, please circle as appropriate. It's about time I gave an
+                        update on what I've been up to, since it's been a month since I made a long-form post on here,
+                        and I only just got started.</p>
+                    <p>To kick things off, the other day, I went out on the field to do some astrophotography. BC has
+                        two Dark Sky Parks, areas shielded from light pollution from the big cities for the purposes of
+                        stargazing. One is McDonald Park off Highway 1, evenly spaced between Abbotsford and Chilliwack,
+                        and the other being Cattle Point on the Oak Bay waterfront. In the wee hours of June 14, I went
+                        with the former.</p>
+                    <p>My equipment for the night was my Canon EOS 700D camera - a completely unremarkable 13-year-old
+                        DSLR - and a Canon EF 50mm f/1.8 IS STM lens - a completely unremarkable macro lens. For the
+                        technically-inclined, I add that because it's a full-frame lens on a crop-sensor camera, my
+                        effective focal length was 80mm.</p>
+                    <div class="image-container">
+                        <img src="/assets/gallery/space/scutum star cloud.jpg" alt="Scutum Star Cloud">
+                        <p class="meta">The Scutum star cloud, in the constellation Scutum.</p>
+                    </div>
+                    <p>I took about 350 shots while I was out with my father and brother, taking several sets of 15
+                        frames each with a 5-second exposure time. That is to say, in my inexperience, I allowed only 75
+                        seconds of integration time per images. I've begun to get used to learning the workflow, merging
+                        the frames
+                        together with stars as an anchor in DeepSkyStacker, and piping the resulting output into
+                        Lightroom to adjust and pull out the hidden stars. This was by no means professional, and I'm
+                        put to shame by the folks at <a
+                            href="https://www.reddit.com/r/astrophotography/top/">r/Astrophotography</a>, but it's still
+                        very good for me as a beginner.</p>
+                    <p>I can't say it was all starshine and roses though. We're a week out from the summer solstice,
+                        which I realized only when I was there that astronomical twilight never ends. I was out there
+                        past midnight and the sun's light was still peeking through over Sumas Mountain to the north, in
+                        addition to the glow of the cities to the east and west. So even at the Dark Sky parksite, it
+                        was too bright to see the Milky Way that I was so very anticipating to see.</p>
+                    <div class="image-container">
+                        <img src="/assets/gallery/space/milky way.jpg" alt="Milky Way framing the Cygnus star cloud">
+                        <p class="meta">The Milky Way framing the pale glow of the Cygnus star cloud.</p>
+                    </div>
+                    <p>Lessons learned, I know now how to prepare for the next outing.</p>
+                    <ol>
+                        <li>
+                            <p>Use a better lens. I want to get the EF-S 24mm 2.8 IS STM lens, the "Pancake". I'll be
+                                able to scope a wider part of the sky, maybe even get the full Milky Way. I also want to
+                                try a lens with a greater focal length and see how far I can zoom into the night.</p>
+                        </li>
+                        <li>
+                            <p>Take more pictures. 75 seconds of integration is nothing. I want to have a full 25
+                                minutes of continuous shooting. A camera sensor is a bucket of light, 15 sets of 5
+                                seconds barely fills it, and I need aggressive processing to expose the hidden details.
+                                More light getting through means I can punch through the diffuse gas and see the
+                                intricate structures and nebulae.
+                            </p>
+                        </li>
+                        <li>
+                            <p>Different software. DSS is barebones, and Lightroom isn't built for this. I've heard good
+                                things about Siril, I want to try that.</p>
+                        </li>
+                        <li>
+                            <p>Better timing. The ides of June were no good, it was too bright. I feel I'll have better
+                                luck mid-July or August, when the twilight ends.</p>
+                        </li>
+                    </ol>
+                    <div class="image-container">
+                        <img src="/assets/gallery/space/cygnus.jpg" alt="Cygnus star cloud and Vega">
+                        <p class="meta">The Cygnus star cloud, shrouded in its gas, Vega as the beacon.</p>
+                    </div>
+                    <p>
+                        Now some administrative announcements. I've made a lot of changes to the site since I made it
+                        last month. I massively changed the layout from 90s teal to dark green tones. Here's some
+                        trivia: The green background is inspired by the fabric of my guitar case, and the brown, while
+                        inspired by my corkboard, actually uses a paper texture. I've also made efficiency improvements,
+                        less copying and pasting and more writing. </p>
+
+                    <p> I also built a gallery page, <a href="/pages/gallery.html">here</a>, to see all of the above
+                        images in higher quality. Yes
+                        this meant I had to add JavaScript. No, I haven't learned it yet, I will eventually, this was
+                        just copied from W3C. All that remains are to squash various bugs that have popped up out of
+                        nowhere.
+                    </p>
+                    <p>That should be all for now, I have many more updates to make.</p>
+                </article>
+            </div>
+        </main>
+        <aside id="sidebar-right">
+            <div class="sidebar-right"></div>
+        </aside>
+
+    </div>
+    <footer>
+        <div class="footer"></div>
+    </footer>
+
+
+</body>
+
+</html>
