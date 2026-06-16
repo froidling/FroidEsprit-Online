@@ -20,6 +20,63 @@
         $(".footer").replaceWith(data);
     });
 </script>
+<script>
+    // Force the script to wait until the browser draws the HTML elements
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // This now perfectly matches your hyphenated id="view-port"
+        const viewport = document.getElementById('view-port');
+        const gateContainer = document.getElementById('gate-container');
+        const gateHint = document.getElementById('gate-hint');
+        const gateInput = document.getElementById('gate-input');
+        const libraryTemplate = document.getElementById('shrine-library');
+
+        // Sturdy firewall to prevent code execution if an element is missing
+        if (!gateInput || !viewport) return;
+
+        gateInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                e.preventDefault(); // Defends against accidental mobile form refreshes
+                const answer = gateInput.value.trim().toLowerCase();
+
+                if (answer === 'froidesprit') {
+                    // Pass the elements directly into the animation logic
+                    unlockVault(viewport, gateContainer, gateHint, gateInput, libraryTemplate);
+                } else {
+                    gateHint.textContent = "Incorrect.";
+                    gateInput.value = ''; // Flush the text box
+                }
+            }
+        });
+    });
+
+    function unlockVault(viewport, gateContainer, gateHint, gateInput, libraryTemplate) {
+        gateHint.textContent = "Access granted.";
+        gateInput.disabled = true;
+        gateInput.style.display = 'none';
+
+        // Wait 1 second for "Access granted" to settle
+        setTimeout(() => {
+            gateContainer.classList.add('fade-out');
+
+            // Once the gate container is invisible, replace its inside contents
+            setTimeout(() => {
+                viewport.innerHTML = ''; // Safely clear out the gate UI inside view-port
+
+                // Clone and inject the template
+                const clone = libraryTemplate.content.cloneNode(true);
+                viewport.appendChild(clone);
+
+                // Let the CSS transition smoothly bloom the new layout
+                setTimeout(() => {
+                    const content = document.getElementById('library-content');
+                    if (content) content.classList.add('fade-in');
+                }, 50);
+
+            }, 500);
+        }, 1000);
+    }
+</script>
 
 <body>
 
@@ -29,16 +86,28 @@
         </aside>
         <!-- Main content for the blog post -->
         <main>
-            <div class="maintext">
-                <h1>Shrines</h1>
+            <div id="view-port">
+                <article id="gate-container">
+                    <p id="gate-hint">What is my secret name?</p>
+                    <input type="text" id="gate-input" autofocus placeholder="Enter passphrase...">
+                </article>
             </div>
-            <article>
+        </main>
+
+        <template id="shrine-library">
+            <article id="library-content" class="fade-layer">
+                <h1>Shrines</h1>
+                <hr style="height: 4px; background-color: #333; border: none; margin: 40px 0; border-radius: 10px;">
                 <h2>WIP</h2>
+                <p>If you made it here, then that means you either already knew me, or you know how to get around a
+                    static site. That password lock is to keep out folks who know me IRL, since this corner is more
+                    unserious.</p>
                 <div>
 
                 </div>
             </article>
-        </main>
+        </template>
+
         <aside id="sidebar-right">
             <div class="sidebar-right"></div>
         </aside>

@@ -498,6 +498,34 @@ img.gallery {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+/* Shrine gateway */
+
+#gate-container {
+  text-align: center;
+
+  p {
+    text-align: center;
+  }
+
+  height: 100%;
+  margin-top: 100px;
+  transition: opacity 0.5s ease;
+}
+
+#gate-container.fade-out {
+  opacity: 0;
+}
+
+.fade-layer {
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+}
+
+.fade-layer.fade-in {
+  opacity: 1;
+}
+
+
 @media (max-width: 800px) {
     .container {
         grid-template:
