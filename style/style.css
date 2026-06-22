@@ -309,11 +309,13 @@ main {
         width: 60%;
         margin: auto;
         position: relative;
+        
 
         img {
             border: 2.5px solid #333;
             height: auto;
             width: 100%;
+            max-width: 100%;
             border-radius: 5px;
         }
 
