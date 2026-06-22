@@ -272,8 +272,6 @@ main {
 
         div {
             width: calc(33% - 10px);
-            margin: 5px;
-            border: 5px solid #333;
             position: relative;
             overflow: hidden;
 
@@ -399,9 +397,11 @@ I'll be sure to properly edit it later. */
 
 .gallery {
     display: block;
-    max-width: 33%;
+    max-width: calc(33% - 10px);
     padding: 5px;
     height: auto;
+    margin: 5px;
+    border: 5px solid #333;
 }
 
 .modal {
@@ -501,30 +501,33 @@ img.gallery {
 /* Shrine gateway */
 
 #gate-container {
-  text-align: center;
-
-  p {
     text-align: center;
-  }
 
-  height: 100%;
-  margin-top: 100px;
-  transition: opacity 0.5s ease;
+    p {
+        text-align: center;
+    }
+
+    height: 100%;
+    margin-top: 100px;
+    transition: opacity 0.5s ease;
 }
 
 #gate-container.fade-out {
-  opacity: 0;
+    opacity: 0;
 }
 
 .fade-layer {
-  opacity: 0;
-  transition: opacity 0.8s ease-in;
+    opacity: 0;
+    transition: opacity 0.8s ease-in;
 }
 
 .fade-layer.fade-in {
-  opacity: 1;
+    opacity: 1;
 }
 
+.bonsai {
+    border: 2px #1a1c1a;
+}
 
 @media (max-width: 800px) {
     .container {
