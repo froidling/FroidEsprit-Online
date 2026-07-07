@@ -8,6 +8,8 @@ body {
     margin: auto;
     padding: auto;
     background-attachment: fixed;
+    background-image: url(/assets/backgrounds/shrines/vancouver-backdrop.jpg);
+    background-repeat:repeat;
 }
 
 .container {
