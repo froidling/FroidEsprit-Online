@@ -24,14 +24,12 @@
     // Force the script to wait until the browser draws the HTML elements
     document.addEventListener('DOMContentLoaded', () => {
 
-        // This now perfectly matches your hyphenated id="view-port"
         const viewport = document.getElementById('view-port');
         const gateContainer = document.getElementById('gate-container');
         const gateHint = document.getElementById('gate-hint');
         const gateInput = document.getElementById('gate-input');
         const libraryTemplate = document.getElementById('shrine-library');
 
-        // Sturdy firewall to prevent code execution if an element is missing
         if (!gateInput || !viewport) return;
 
         gateInput.addEventListener('keypress', function (e) {
@@ -40,7 +38,6 @@
                 const answer = gateInput.value.trim().toLowerCase();
 
                 if (answer === 'froidesprit') {
-                    // Pass the elements directly into the animation logic
                     unlockVault(viewport, gateContainer, gateHint, gateInput, libraryTemplate);
                 } else {
                     gateHint.textContent = "Incorrect.";
@@ -103,7 +100,11 @@
                     static site. That password lock is to keep out folks who know me IRL, since this corner is more
                     unserious.</p>
                 <div class="shrine-shelf">
-                    <div class="shrine-container"></div>
+                    <div class="shrine-container">
+                        <a href="/pages/shrines/mukmuk.html"> <img src="/assets/thumbnails/shrines/mukmuk.jpg"
+                                alt="mukmuk shrine" class="shrine-thumbnail">
+                        </a>
+                    </div>
 
                 </div>
             </article>
