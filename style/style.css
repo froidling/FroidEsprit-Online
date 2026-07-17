@@ -368,6 +368,11 @@ main {
     width: 25px;
 }
 
+.about-list {
+    margin: 20px auto;
+    text-align: left;
+    list-style: none;
+}
 
 footer {
     display: flex;
