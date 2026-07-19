@@ -34,14 +34,13 @@ Emergency Debug Border
 **/
 .container {
     display: grid;
-    grid-template-columns: 300px minmax(400px, 1fr) 200px;
+    grid-template-columns: 300px minmax(600px, 1fr) 200px;
     grid-template-areas:
         "header header header"
         "sidebar-left main sidebar-right"
         "footer footer footer";
     max-width: 1440px;
     margin: 0 auto;
-    align-items: start end;
 }
 
 header {
@@ -309,7 +308,7 @@ main {
         width: 60%;
         margin: auto;
         position: relative;
-        
+
 
         img {
             border: 2.5px solid #333;
@@ -543,6 +542,7 @@ img.gallery {
     height: auto;
     margin: 5px;
     border: 5px solid #333;
+
     .shrine-thumbnail {
         width: 100%;
     }
@@ -552,6 +552,7 @@ img.gallery {
     width: 100;
     height: 700px;
     box-sizing: border-box;
+
     a-scene {
         width: 100;
         height: 100%;
