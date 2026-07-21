@@ -1,0 +1,16 @@
+[
+    {
+        "title": "First-Time Astrophotography",
+        "url": "/blog/2026/june/06-15-2026.html",
+        "type": "article",
+        "tags": ["photography"],
+        "summary": "My first attempt at astrophotography."
+    },
+    {
+        "title": "APRS iGate Setup with Raspberry Pi",
+        "url": "/blog/2026/may/05-13-2026.html",
+        "type": "article",
+        "tags": ["radio", "raspberry-pi"],
+        "summary": "Setting up an APRS iGate."
+    }
+]
