@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <title>Welcome to my Website - VA7ECX</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/posts.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <script src="/script/jQuery.js"></script>
+
 <script>
     $.get("/frame/sidebar-left.html", function (data) {
         $(".sidebar-left").replaceWith(data);
     });
-    $.get("/frame/sidebar-right.html", function (data) {
+    $.get("/frame/post-sidebar.html", function (data) {
         $(".sidebar-right").replaceWith(data);
     });
     $.get("/frame/footer.html", function (data) {
@@ -26,13 +27,30 @@
         <aside id="sidebar-left">
             <div class="sidebar-left"></div>
         </aside>
-
         <!-- Main content for the blog post -->
         <main>
             <div>
                 <article>
                     <h1>Post Title</h1>
                     <p class="meta">By Ethan | Month DD, YYYY</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+                        pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean
+                        sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa
+                        nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti
+                        sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+                        pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean
+                        sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa
+                        nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti
+                        sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+                        pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean
+                        sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa
+                        nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti
+                        sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+
+                    <p class="meta"></p>
                 </article>
             </div>
         </main>
