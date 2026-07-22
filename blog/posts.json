@@ -14,5 +14,13 @@
         "type": "article",
         "tags": ["ham-radio", "raspberry-pi"],
         "summary": "Setting up an APRS iGate."
+    },
+    {
+        "title": "Welcome to my Website!",
+        "shortTitle": "Welcome!",
+        "url": "/blog/2026/may/05-11-2026",
+        "type": "article",
+        "tags": ["admin"],
+        "summary": "My first blog post to configure my website."
     }
 ]
