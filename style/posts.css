@@ -111,6 +111,7 @@ div.aside-box {
         text-decoration: none;
         overflow-wrap: break-word;
         hyphens: auto;
+        margin-bottom: 0.3rem;
     }
 }
 .category-list {
