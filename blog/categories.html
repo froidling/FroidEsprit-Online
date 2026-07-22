@@ -31,11 +31,18 @@
         <main>
             <div>
                 <article>
-                    <h1>Post Title</h1>
-                    <p class="meta">By Ethan | Month DD, YYYY</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe laudantium corrupti omnis
-                        voluptatem, aliquid, ut reiciendis animi excepturi voluptate sed quod dolorem necessitatibus
-                        unde error odit reprehenderit cumque? Fugiat, sunt.</p>
+                    <h1 id="page-title">All Categories</h1>
+                    <p class="meta">A list of all posts by category.</p>
+
+                    <div id="filter-reset" style="display: none; margin-bottom: 1.5rem;">
+                        <a href="/blog/categories.html">&larr; View all categories</a>
+                    </div>
+
+                    <div id="category-posts-container">
+                        <p>Loading categories...</p>
+                    </div>
+
+                    <script src="/script/categoryPage.js" defer></script>
                 </article>
             </div>
         </main>

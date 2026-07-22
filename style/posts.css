@@ -34,7 +34,7 @@ Emergency Debug Border
 **/
 .container {
     display: grid;
-    grid-template-columns: 300 minmax(900px, 1fr) 200px;
+    grid-template-columns: 300px 1fr 200px;
     grid-template-areas:
         "header header header"
         "sidebar-left main sidebar-right"
@@ -101,6 +101,7 @@ div.aside-box {
 
 #archive-container {
     text-align: left;
+    margin: 0;
     ul {
         list-style: none;
         padding-left: 1rem;
@@ -111,6 +112,17 @@ div.aside-box {
         overflow-wrap: break-word;
         hyphens: auto;
     }
+}
+.category-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    text-align: left;
+    li {
+        margin-bottom: 0.3rem;
+    }
+    
+
 }
 
 ul.aside-currently-list {
@@ -132,6 +144,17 @@ ul.aside-currently-list {
         margin-bottom: 10px;
         text-decoration: none;
     }
+}
+
+.category-post-list {
+  list-style-type: none; /* Removes standard black dots */
+  padding-left: 0;      /* Removes browser default 40px left indentation */
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.category-post-list li {
+  margin-bottom: 1rem;  /* Gives breathing room between post entries */
 }
 
 div.status {
@@ -278,6 +301,10 @@ main {
             padding: 5px 10px;
         }
     }
+}
+
+article {
+    width: 100% !important;
 }
 
 .maintext {

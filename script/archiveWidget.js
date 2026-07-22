@@ -19,8 +19,8 @@ fetch('/blog/posts.json')
 
         // Create tree
         let html = `<div class="aside-box__heading">
-        <p>archive</p>
-    </div>`
+                        <p>archive</p>
+                    </div>`
         for (const year in archive) {
             let totalYearPosts = 0;
             let monthHtml = '';
@@ -32,7 +32,7 @@ fetch('/blog/posts.json')
                     <details open class="month-group">
                         <summary>${month} (${monthPosts.length})</summary>
                          <ul>
-                            ${monthPosts.map(p => `<li><a href="${p.url}">${p.title}</a></li>`).join('')}
+                            ${monthPosts.map(p => `<li><a href="${p.url}">${p.shortTitle}</a></li>`).join('')}
                         </ul>
                     </details>
                 `;

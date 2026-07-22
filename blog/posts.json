@@ -1,13 +1,15 @@
 [
     {
-        "title": "First-Time Astrophotography",
+        "title": "First-Time Astrophotography, and other updates.",
+        "shortTitle": "First-Time Astrophotography",
         "url": "/blog/2026/june/06-15-2026.html",
         "type": "article",
         "tags": ["photography"],
         "summary": "My first attempt at astrophotography."
     },
-    {
-        "title": "APRS iGate Setup with Raspberry Pi",
+    {   
+        "title": "Raspberry Pi APRS iGate Build with RTL-SDR Blog Receiver",
+        "shortTitle": "APRS iGate Setup with Raspberry Pi",
         "url": "/blog/2026/may/05-13-2026.html",
         "type": "article",
         "tags": ["radio", "raspberry-pi"],
