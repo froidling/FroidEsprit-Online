@@ -32,6 +32,7 @@ div {
 Emergency Debug Border 
 }
 **/
+
 .container {
     display: grid;
     grid-template-columns: 300px 1fr 200px;
@@ -306,6 +307,17 @@ main {
 
 article {
     width: 100% !important;
+}
+dl {
+    text-align: left;
+}
+dt {
+    color: #2a4d38;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+dd {
+    margin-bottom: 25px;
 }
 
 .maintext {
