@@ -563,102 +563,141 @@ img.gallery {
 
 @media (max-width: 800px) {
     .container {
-        grid-template:
-            "header"
+        grid-template-columns: 1fr;
+        grid-template-areas:
             "sidebar-left"
             "main"
             "sidebar-right"
             "footer";
-        grid-gap: 20px;
+        gap: 15px;
+        padding: 10px;
+    }
 
-        #sidebar-left {
-            grid-area: sidebar-left;
-            margin: auto;
-            width: calc(100% - 25px);
-            height: auto;
-            border: 2.5px solid #333;
-            border-radius: 5px;
+    #sidebar-left {
+        width: 100%;
+        border-radius: 5px;
+        border: 2.5px solid #333;
+        padding: 12px;
 
-            nav {
+        #bio {
+            display: flex !important;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            margin-bottom: 12px;
 
-                details {
-                    margin: auto;
-                    width: 90%;
-                    text-align: center;
-                    padding: 5px;
+            p:first-child {
+                font-size: 0.85em;
+                margin: 0;
+                padding-right: 10px;
+            }
 
-                    a {
-                        margin: 5px auto;
-                        width: 90%;
-                    }
-                }
+            p:last-child {
+                display: none;
+            }
 
+            a {
+                flex-shrink: 0;
+            }
 
+            img#qsl {
+                height: 60px;
+                object-fit: cover;
             }
         }
 
-        #bio {
-            display: none;
+        nav {
+            width: 100%;
+
+            details {
+                width: 100%;
+            }
         }
 
         .webgarden-widget {
-            display: none;
+            display: none !important;
         }
-
         .current {
             display: none;
         }
+
     }
 
     main {
-        margin: auto;
-        width: calc(100% - 25px);
+        width: 100%;
         border: 2.5px solid #333;
         border-radius: 5px;
+        padding: 15px;
 
-        .featured-posts div {
-            width: calc(50% - 10px);
+        .featured-posts {
+            flex-direction: column;
+
+            .gallery {
+                max-width: 100%;
+                width: 100%;
+                margin: 5px 0;
+            }
         }
-
     }
 
     #sidebar-right {
-        grid-area: sidebar-right;
-
-        margin: auto;
-        width: calc(100% - 25px);
+        width: 100%;
         border: 2.5px solid #333;
         border-radius: 5px;
+        padding: 30px 15px 15px 15px;
+        display: flex !important;
+        flex-direction: column;
+        gap: 25px; 
 
-        .status {
-            display: none;
+        
+
+        .aside-box {
+            display: block !important;
+            margin-top: 0 !important;
+            height: auto !important; 
+            padding: 0.75em;
+            width: 100%;
         }
-
-        .buttons {
-            display: none;
+        .solar-widget {
+            display: none !important;
         }
 
         .currently-online {
-            display: none;
+            text-align: center;
+
+            img {
+                display: inline-block;
+                max-width: 100%;
+            }
         }
 
-        .solar-widget {
-            display: none;
+
+        .buttons marquee {
+            width: 100%;
+            display: block;
         }
 
+
+        .other-sites {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;       
+            justify-content: center; 
+            align-items: center;
+            gap: 8px;              
+
+    br {
+        display: none;
     }
-
+            img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 5px;
+            }
+        }
+    }
     .gallery {
-
+        max-width: 100%;
         width: 100%;
-        padding: 5px;
-        height: auto;
-    }
-
-    .lightbox {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        text-align: center;
     }
 }
