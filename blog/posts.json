@@ -1,5 +1,13 @@
 [
     {
+        "title": "Archival Mega-Upload",
+        "shortTitle": "Archival Mega-Upload",
+        "url": "/blog/2026/august/08-19-2026.html",
+        "type": "article",
+        "tags": ["admin", "misc"],
+        "summary": "Archving all my old writing."
+    },
+    {
         "title": "100 Questions for Webmasters",
         "shortTitle": "100 Questions",
         "url": "/blog/2026/august/08-11-2026.html",
@@ -30,5 +38,91 @@
         "type": "article",
         "tags": ["admin"],
         "summary": "My first blog post to configure my website."
+    },
+    
+
+
+
+
+    {
+        "title": "Tae Kwon Do [reupload]",
+        "shortTitle": "Tae Kwon Do",
+        "url":"/blog/2012/october/10-02-2012.html",
+        "type": "article",
+        "tags": ["legacy"],
+        "summary": "My younger self talks about going to Tae Kwon Do."
+    },
+    {
+        "title": "Light 1 [reupload]",
+        "shortTitle": "Light 1",
+        "url":"/blog/2012/october/10-01-2012.html",
+        "type": "article",
+        "tags": ["legacy"],
+        "summary": "My younger self talks about light."
+    },
+    {
+        "title": "Amazing Pigeons [reupload]",
+        "shortTitle": "Amazing Pigeons",
+        "url":"/blog/2012/september/09-30-2012.html",
+        "type": "article",
+        "tags": ["legacy"],
+        "summary": "My younger self talks about pigeons."
+    },
+    {
+        "title": "Geckos 2 [reupload]",
+        "shortTitle": "Geckos 2",
+        "url":"/blog/2012/september/09-28-2012.html",
+        "type": "article",
+        "tags": ["legacy"],
+        "summary": "My younger self talks about geckos again."
+    },
+    {
+        "title": "Geckos. [reupload]",
+        "shortTitle": "Geckos",
+        "url":"/blog/2012/september/09-27-2012.html",
+        "type": "article",
+        "tags": ["legacy"],
+        "summary": "My younger self talks about geckos."
+    },
+    {
+        "title": "My favourite Wii game [reupload]",
+        "shortTitle": "My favourite Wii game",
+        "url":"/blog/2012/september/09-26-2012.html",
+        "type": "article",
+        "tags": ["legacy"],
+        "summary": "My younger self talks about his Mario obsession."
+    },
+    {
+        "title": "the box [reupload]",
+        "shortTitle": "the box",
+        "url":"/blog/2012/september/09-25-2012.html",
+        "type": "article",
+        "tags": ["legacy"],
+        "summary": "My younger self talks about his box."
+    },
+    {
+        "title": "Khanacademy. [reupload]",
+        "shortTitle": "Khanacademy",
+        "url":"/blog/2012/september/09-24-2012.html",
+        "type": "article",
+        "tags":["legacy"],
+        "summary": "My younger self talks about using Khan Academy."
+    },
+    {
+        "title": "My little brother [REDACTED] [reupload]",
+        "shortTitle": "My little brother",
+        "url": "/blog/2012/september/09-23-2012.html",
+        "tags":["legacy"],
+        "type":"article",
+        "summary": "My younger self talks about his brother."
+    },
+    {
+        "title": "Hello world! [reupload]",
+        "shortTitle": "Hello world!",
+        "url": "/blog/2012/september/09-22-2012.html",
+        "type": "article",
+        "tags": ["legacy"],
+        "summary": "My first post from fourteen years ago."
     }
+    
 ]

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Geckos 2 - A Younger Self</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/style/posts.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script src="/script/jQuery.js"></script>
+
+  <script>
+    $.get("/frame/sidebar-left.html", function (data) {
+      $(".sidebar-left").replaceWith(data);
+    });
+    $.get("/frame/post-sidebar.html", function (data) {
+      $(".sidebar-right").replaceWith(data);
+    });
+    $.get("/frame/footer.html", function (data) {
+      $(".footer").replaceWith(data);
+    });
+  </script>
+
+  <body>
+    <div class="container">
+      <aside id="sidebar-left">
+        <div class="sidebar-left"></div>
+      </aside>
+      <!-- Main content for the blog post -->
+      <main>
+        <div>
+          <article>
+            <h1>Geckos 2 [reupload]</h1>
+            <p class="meta">
+              By a Younger Self |
+              <time datetime="2012-09-28">September 28, 2012</time>
+            </p>
+            <p id="tag-list" class="meta"></p>
+            <script src="/script/postTags.js" defer></script>
+            <p>Hello</p>
+            <p>
+              Welcome to Geckos 2. As you can see is the sequel of Geckos. Did
+              you know there is a species of gecko called the flying gecko? It
+              is a relative of the Draco lizard. They are relatives because both
+              can glide. When a flying gecko wants to find a mate or defend a
+              territory, it clicks it's tongue at the the top of it's mouth. A
+              flying gecko has flaps of skin that act as parachutes that help it
+              glide. Geckos can only glide from tree to tree when he launches
+              from a point higher than it's destination. Even though the flying
+              gecko can glide, most lizards, even most geckos can't glide. Some
+              geckos can even camouflage. It's called the flat-tail leaf gecko.
+              I think that is what it is called. To geckos Madagascar is gecko
+              heaven because of lots of geckos live there. What I said about
+              geckos in gecko 1 was halfway there. They have tiny hairs on
+              gecko's feet that make electricity. I can't wait to make post's
+              about more animals. There is so much to blog about. The next post
+              is going to be about pigeons. Here is a preview. What you might
+              think is fat on a pigeon's belly is actually muscle, perfect for
+              escaping from falcons. Thank you Miz
+              <span class="redacted">[REDACTED]</span> for the info about
+              Madagascar. Mom says I have to go to bed now. Good night.
+            </p>
+            <p>
+              ps. My friend <span class="redacted">[REDACTED]</span> has a
+              leopard gecko.
+            </p>
+          </article>
+        </div>
+      </main>
+      <aside id="sidebar-right">
+        <div class="sidebar-right"></div>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="footer"></div>
+    </footer>
+  </body>
+</html>

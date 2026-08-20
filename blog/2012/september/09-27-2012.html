@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Geckos - A Younger Self</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/style/posts.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script src="/script/jQuery.js"></script>
+
+  <script>
+    $.get("/frame/sidebar-left.html", function (data) {
+      $(".sidebar-left").replaceWith(data);
+    });
+    $.get("/frame/post-sidebar.html", function (data) {
+      $(".sidebar-right").replaceWith(data);
+    });
+    $.get("/frame/footer.html", function (data) {
+      $(".footer").replaceWith(data);
+    });
+  </script>
+
+  <body>
+    <div class="container">
+      <aside id="sidebar-left">
+        <div class="sidebar-left"></div>
+      </aside>
+      <!-- Main content for the blog post -->
+      <main>
+        <div>
+          <article>
+            <h1>Geckos. [reupload]</h1>
+            <p class="meta">
+              By a Younger Self |
+              <time datetime="2012-09-27">September 27, 2012</time>
+            </p>
+            <p id="tag-list" class="meta"></p>
+            <script src="/script/postTags.js" defer></script>
+            <p>
+              Have you ever wondered how geckos hang on glass upside down
+              without falling? Well let me tell you. There are tiny electrical
+              charges in the gecko's feet. Pretty weird but there's more weird
+              things about the gecko. The gecko can wash it's own eye with it's
+              tongue. I watched it on an episode the gecko effect on Wild Kratts
+              but we can save that for another post. I'll make a sequel to this
+              post. I would like to learn more about geckos. You can help me by
+              gathering what you know about geckos and add a comment OK. The
+              sequel's title is going to be Geckos 2.
+            </p>
+          </article>
+        </div>
+      </main>
+      <aside id="sidebar-right">
+        <div class="sidebar-right"></div>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="footer"></div>
+    </footer>
+  </body>
+</html>

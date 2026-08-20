@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Archival Upload - VA7ECX</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/style/posts.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script src="/script/jQuery.js"></script>
+
+  <script>
+    $.get("/frame/sidebar-left.html", function (data) {
+      $(".sidebar-left").replaceWith(data);
+    });
+    $.get("/frame/post-sidebar.html", function (data) {
+      $(".sidebar-right").replaceWith(data);
+    });
+    $.get("/frame/footer.html", function (data) {
+      $(".footer").replaceWith(data);
+    });
+  </script>
+
+  <body>
+    <div class="container">
+      <aside id="sidebar-left">
+        <div class="sidebar-left"></div>
+      </aside>
+      <!-- Main content for the blog post -->
+      <main>
+        <div>
+          <article>
+            <h1>Archival Mega-Upload</h1>
+            <p class="meta">
+              By VA7ECX | <time datetime="2026-08-19">August 19, 2026</time>
+            </p>
+            <p id="tag-list" class="meta"></p>
+            <script src="/script/postTags.js" defer></script>
+            <p>Minor update post here, I'm moving some things around.</p>
+            <p>
+              I started blogging a long time ago on blog.com, a now-defunct
+              Wordpress-based blogging platform. The site went under in 2016,
+              and I thought I lost everything. As it turns out, my folks kept
+              everything up to October 2013, and Internet Archive kept
+              everything past October 2014. I've decided to put myself through
+              the paces and transcribe everything for here. I wasn't able to
+              keep everything, I did end up losing much of 2014, but this was
+              never meant to be such a comprehensive archive anyway. Think I'll
+              repost about nine or ten a day until they're all there, need to
+              pace myself so I don't get burned out.
+            </p>
+            <p>
+              Am I aware of the risks? Yes, I am. It is well known that
+              observing one's own writing inflicts a degree of pyschic damage. I
+              find perhaps it's easier for me to do this by pretending it's the
+              work of someone else. I can hardly call the me of the past and the
+              me of today the same person.
+            </p>
+            <p>
+              Not everything will be moved over, of course. I'll be censoring
+              names and locations for privacy, and I will not be including
+              images. However, I will not be editing any grammatical or spelling
+              mistakes, to preserve the integrity of the original text.
+            </p>
+            <p>
+              Everything will be labeled under the
+              <a href="/blog/categories.html?type=legacy">"legacy"</a> tag
+              available on the sidebar on desktop or below on mobile for your
+              perusal.
+            </p>
+            <p>
+              Not that there is a good reason to read the thoughts of
+              eight-year-old me. Well, cringe is dead and I'm still breathing.
+              Enjoy.
+            </p>
+          </article>
+        </div>
+      </main>
+      <aside id="sidebar-right">
+        <div class="sidebar-right"></div>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="footer"></div>
+    </footer>
+  </body>
+</html>

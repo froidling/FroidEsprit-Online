@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Amazing Pigeons - A Younger Self</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/style/posts.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script src="/script/jQuery.js"></script>
+
+  <script>
+    $.get("/frame/sidebar-left.html", function (data) {
+      $(".sidebar-left").replaceWith(data);
+    });
+    $.get("/frame/post-sidebar.html", function (data) {
+      $(".sidebar-right").replaceWith(data);
+    });
+    $.get("/frame/footer.html", function (data) {
+      $(".footer").replaceWith(data);
+    });
+  </script>
+
+  <body>
+    <div class="container">
+      <aside id="sidebar-left">
+        <div class="sidebar-left"></div>
+      </aside>
+      <!-- Main content for the blog post -->
+      <main>
+        <div>
+          <article>
+            <h1>Amazing Pigeons [reupload]</h1>
+            <p class="meta">
+              By a Younger Self |
+              <time datetime="2012-09-30">September 30, 2012</time>
+            </p>
+            <p id="tag-list" class="meta"></p>
+            <script src="/script/postTags.js" defer></script>
+            <p>
+              Did you know that the fat on a pigeon's belly is actually muscle?
+              It's true. The maximum lifespan of a pigeon is 33 years. It is
+              usually 15. It is the only bird that can give milk. Both the male
+              and female produce milk. Did you know that they lay two eggs at a
+              time? Both parents take care of the baby pigeons. Once a pigeon
+              mates it never divorces. The couple stays together for life.
+              Pretty cool. A baby pigeon is called a squab. In Walt Disney World
+              hundreds of pigeons are released everyday. They live everywhere in
+              the world except for the coldest climates like Antarctica and the
+              driest and hottest places like the Sahara Desert. Pigeons eat
+              seeds and grains. Homing pigeons can fly over 92 miles an hour and
+              can fly over 600 miles in one day. That's a long way to go. They
+              are one of the smartest birds and silly too. Pigeons can see
+              ultraviolet light. Maybe they can help scientists se the ozone
+              layer in the future. Did you know that there are over 300 species
+              of pigeons? Adult pigeons have 10,000 feathers. I wonder who took
+              the time to count all those feathers? Another interesting thin is
+              that piegons can detect the earth's magnetic field and that is
+              what helps them find their way home. I learned a new word today.
+              The word is gregarious. Pigeons are gregarious. It means that they
+              like to be in groups, unlike me. I like to spend time by myself.
+              Dr. <span class="redacted">[REDACTED]</span> says that is because
+              I am an introvert. Lots of people are introverts and that is ok.
+              Mom's laptop is at Future Shop so I am blogging on her new Samsung
+              Galaxy Note tab. It is a good device to use when dad is using the
+              desktop computer and mom's laptop isn't here. I hope mom lets me
+              use this tab even when she gets her laptop back. I think it is
+              easier for me. I like using the stylus. That's all for now
+              Tomorrow my blog is going to be about the light spectrum. "We
+              can't see most light". Tune in everybody. Hope you have a good
+              weekend!
+            </p>
+          </article>
+        </div>
+      </main>
+      <aside id="sidebar-right">
+        <div class="sidebar-right"></div>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="footer"></div>
+    </footer>
+  </body>
+</html>

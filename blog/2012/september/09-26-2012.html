@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My favourite Wii game - A Younger Self</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/style/posts.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script src="/script/jQuery.js"></script>
+
+  <script>
+    $.get("/frame/sidebar-left.html", function (data) {
+      $(".sidebar-left").replaceWith(data);
+    });
+    $.get("/frame/post-sidebar.html", function (data) {
+      $(".sidebar-right").replaceWith(data);
+    });
+    $.get("/frame/footer.html", function (data) {
+      $(".footer").replaceWith(data);
+    });
+  </script>
+
+  <body>
+    <div class="container">
+      <aside id="sidebar-left">
+        <div class="sidebar-left"></div>
+      </aside>
+      <!-- Main content for the blog post -->
+      <main>
+        <div>
+          <article>
+            <h1>My favourite Wii game [reupload]</h1>
+            <p class="meta">
+              By a Younger Self |
+              <time datetime="2012-09-26">September 26, 2012</time>
+            </p>
+            <p id="tag-list" class="meta"></p>
+            <script src="/script/postTags.js" defer></script>
+            <p>
+              My favourite Wii game is Super Mario Galaxy 2. I am happy I have
+              it. I am on world s (also known as world seven). I always wanted
+              to get all the stars on the game but I still don't have them all.
+              There are 240 stars in all I only am on 80 stars. I don't think I
+              need to tell you this but I'm 8 years old. I wonder how old Mario
+              is? I also have Super Mario galaxy. I have Luigi unlocked too.
+              When I have trouble go on this very laptop for youtube for hints
+              then I get back to the game. I am going crazy with my game and my
+              blog. <span class="redacted">[REDACTED]</span> loves to watch me
+              play. I was Luigi for Halloween. I wear Mario pj's to bed. I'm
+              pretty much a Mario fan.
+            </p>
+          </article>
+        </div>
+      </main>
+      <aside id="sidebar-right">
+        <div class="sidebar-right"></div>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="footer"></div>
+    </footer>
+  </body>
+</html>
