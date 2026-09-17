@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Missing Lego - A Younger Self</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/style/posts.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script src="/script/jQuery.js"></script>
+
+  <script>
+    $.get("/frame/sidebar-left.html", function (data) {
+      $(".sidebar-left").replaceWith(data);
+    });
+    $.get("/frame/post-sidebar.html", function (data) {
+      $(".sidebar-right").replaceWith(data);
+    });
+    $.get("/frame/footer.html", function (data) {
+      $(".footer").replaceWith(data);
+    });
+  </script>
+
+  <body>
+    <div class="container">
+      <aside id="sidebar-left">
+        <div class="sidebar-left"></div>
+      </aside>
+      <!-- Main content for the blog post -->
+      <main>
+        <div>
+          <article>
+            <h1>Missing Lego [reupload]</h1>
+            <p class="meta">
+              By a Younger Self |
+              <time datetime="2012-10-03">October 3, 2012</time>
+            </p>
+            <p id="tag-list" class="meta"></p>
+            <script src="/script/postTags.js" defer></script>
+            <p>
+              I have a Lego set without the most important piece, the propeller
+              piece at grandmas house. I looked for it and then I finally said
+              "It's a goner". That was less than 3 weeks ago so as you can guess
+              it came a long way all the way frmo the birthplace of Lego,
+              Denmark. Maybe I can put on a picture of the world map place mat
+              showing Denmark coming all the way over here. Denmark is in
+              Europe. That's a long way to go for such a small Lego piece. It
+              happened by calling the customer service. I got it for free
+              because on the box it said 1x so it was the only piece of its
+              type. There are more pieces of Lego. I am building an airplane. I
+              don't like freestyle Lego, just sets. I am doing Lego creator in
+              my bunk bed where my cute but psky little bro
+              <span class="redacted">[REDACTED]</span> can't bother me. In Mr.
+              <span class="redacted">[REDACTED]</span>'s office, I play with a
+              rare type of Lego called Lego Technical. It has wires and a
+              charger. Name as many sets of Lego as you can and I'l make a post
+              called Lego sets and you'l see what it will look like in my words.
+              The next time I go to San Diego (which I hope will be really soon)
+              Mom and Dad said we are going to Lego land. That should be a
+              wonderful time. I'm off to do my Lego now that I have a piece
+              back. bye for now. (:
+            </p>
+          </article>
+        </div>
+      </main>
+      <aside id="sidebar-right">
+        <div class="sidebar-right"></div>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="footer"></div>
+    </footer>
+  </body>
+</html>

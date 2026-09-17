@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>New 3ds - A Younger Self</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/style/posts.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script src="/script/jQuery.js"></script>
+
+  <script>
+    $.get("/frame/sidebar-left.html", function (data) {
+      $(".sidebar-left").replaceWith(data);
+    });
+    $.get("/frame/post-sidebar.html", function (data) {
+      $(".sidebar-right").replaceWith(data);
+    });
+    $.get("/frame/footer.html", function (data) {
+      $(".footer").replaceWith(data);
+    });
+  </script>
+
+  <body>
+    <div class="container">
+      <aside id="sidebar-left">
+        <div class="sidebar-left"></div>
+      </aside>
+      <!-- Main content for the blog post -->
+      <main>
+        <div>
+          <article>
+            <h1>New 3ds [reupload]</h1>
+            <p class="meta">
+              By a Younger Self |
+              <time datetime="2012-11-27">November 27, 2012</time>
+            </p>
+            <p id="tag-list" class="meta"></p>
+            <script src="/script/postTags.js" defer></script>
+            <p>
+              Hi everybody. On Sunday I got a new 3ds. It think is the best
+              model of Ds Nintendo ever made (I think). First I went to Future
+              Shop. The 3ds cost 149 dollars. I had 100 dollars through gift
+              cards, I sold Mom the Dsi for 50 dollars, and the 3ds came with a
+              free 30 dollar gift card. I had more than enough money to get it.
+              It is great because I can switch to 3d and not use glasses. It
+              would be good if we go on a long car trip because I could use the
+              3ds while Jason uses the dsi. Then he won't bother me. He always
+              bothers me. Won't it be good if your little bother or sister had
+              their own ds to play with while you play with yours (that is, if
+              you have a brother or sister and a ds or two). I wanted to get it
+              ever since it came out. Did I mention I can only play with it on
+              days when I do all my work at school. On days that I don't do all
+              my work at school, Mom says "Not a chance Mack", "No way Jose",
+              "When pigs fly" (and that means never because pigs will never
+              fly),and "N+O=No". The plan is to do all my work at school, and
+              guess what? Today I did! Today was an incredible, extraordinary,
+              awesome, pretty much great, good day! Today I finally get to play
+              with my 3ds and today was the first day of the school year that I
+              did ALL of my work.
+            </p>
+          </article>
+        </div>
+      </main>
+      <aside id="sidebar-right">
+        <div class="sidebar-right"></div>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="footer"></div>
+    </footer>
+  </body>
+</html>

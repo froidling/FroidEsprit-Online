@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Origami - A Younger Self</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/style/posts.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script src="/script/jQuery.js"></script>
+
+  <script>
+    $.get("/frame/sidebar-left.html", function (data) {
+      $(".sidebar-left").replaceWith(data);
+    });
+    $.get("/frame/post-sidebar.html", function (data) {
+      $(".sidebar-right").replaceWith(data);
+    });
+    $.get("/frame/footer.html", function (data) {
+      $(".footer").replaceWith(data);
+    });
+  </script>
+
+  <body>
+    <div class="container">
+      <aside id="sidebar-left">
+        <div class="sidebar-left"></div>
+      </aside>
+      <!-- Main content for the blog post -->
+      <main>
+        <div>
+          <article>
+            <h1>Origami [reupload]</h1>
+            <p class="meta">
+              By a Younger Self |
+              <time datetime="2012-10-05">October 5, 2012</time>
+            </p>
+            <p id="tag-list" class="meta"></p>
+            <script src="/script/postTags.js" defer></script>
+            <p>
+              I like origami so much that I am an origami master. It all started
+              when I was 5 years old. I was at grandma's house when grandma came
+              outside with an origami book and paper. "what is origami?" I
+              asked. Now I know ahat it means. It means the Japanese art of
+              paper folding. Legend says that if you make a 1000 cranes you will
+              live 1000 years. The crane is one of the most complex sculptures
+              to make. I need as much help as I can to make 1000 cranes. I have
+              10 right now. Maybe you can help me. You can help by making as
+              many as you can and comment to this blog by posting the number of
+              cranse you have down and then I will reply by saying how many I
+              have in total after adding up all of the cranes I have. There is a
+              book about a young girl in Japan was about to die and she wanted
+              to live 1000 years so she tried to make 1000 cranes. The book was
+              called Sodako and the 1000 Paper Cranes. I read it at the school
+              mom works in when her class was studyiing Japan. I learned that
+              she had the atomic bomb disease and she was affected by it when
+              she was 2 and she lived 10 more years. I recommend you read this
+              book. Back to origami. If you regularly fold a piece of paper, it
+              is called a valley fold. The mountain fold is the opposite of the
+              valley folds. The hardest ones are the reverse folds and sink
+              folds. The inside reverse fold is easer than the outside reverse
+              fold. The hardest one of all to me is the sink fold. You have to
+              push or sink a corner of a certain fold, the frog base into the
+              paper. My favourite thing to make is the crane because it is a
+              symbol of good luck. I have over 8 origami books. My favourite
+              ones are the ones that teach us how to do the crane and the
+              flapping bird. Speaking of the flapping bird, the origami flapping
+              bird is very similar to the crane, The only exception is if you
+              skip a couple steps to make the crane and you do the other parts
+              the same. If you pull the tail of the flapping bird, the wings of
+              the bird flap. I can't wait to teach you how to do origami. Good
+              night.
+            </p>
+          </article>
+        </div>
+      </main>
+      <aside id="sidebar-right">
+        <div class="sidebar-right"></div>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="footer"></div>
+    </footer>
+  </body>
+</html>

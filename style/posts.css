@@ -55,7 +55,8 @@ aside {
 
 div.aside-box {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin-top: 30px;
   padding: 1em;
   border: 1px dashed #3b7a57;
@@ -185,6 +186,16 @@ div.status {
       margin: 0 auto;
     }
   }
+}
+
+.lyric-box {
+  width: 100%;
+  text-align: left;
+}
+
+.lyric-box p,
+cite {
+  color: #3b7a57;
 }
 
 nav {
@@ -391,6 +402,9 @@ footer {
         height: 60px;
         object-fit: cover;
       }
+    }
+    .lyrics {
+      display: none;
     }
 
     nav {

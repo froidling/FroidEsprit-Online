@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bee sting - A Younger Self</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/style/posts.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script src="/script/jQuery.js"></script>
+
+  <script>
+    $.get("/frame/sidebar-left.html", function (data) {
+      $(".sidebar-left").replaceWith(data);
+    });
+    $.get("/frame/post-sidebar.html", function (data) {
+      $(".sidebar-right").replaceWith(data);
+    });
+    $.get("/frame/footer.html", function (data) {
+      $(".footer").replaceWith(data);
+    });
+  </script>
+
+  <body>
+    <div class="container">
+      <aside id="sidebar-left">
+        <div class="sidebar-left"></div>
+      </aside>
+      <!-- Main content for the blog post -->
+      <main>
+        <div>
+          <article>
+            <h1>Bee sting [reupload]</h1>
+            <p class="meta">
+              By a Younger Self |
+              <time datetime="2012-10-16">October 16, 2012</time>
+            </p>
+            <p id="tag-list" class="meta"></p>
+            <script src="/script/postTags.js" defer></script>
+            <p>
+              Once apon a morning, my family was having brunch, which included
+              cinnamon rolls. And then a bee appeared out of nowhere. Dad went
+              to the kichen and got a dish towel and used it as a fly swatter,
+              or in this case, a bee swatter. He was standing by the fireplace
+              whacking at the poor bee trying to be a hero. He called out. "I
+              got it!" What he did was hit the bee straight to the other side of
+              the room. That is Dad's side of the story, time to move to Mom's
+              side of the story. Well in this case at the other side of the room
+              was where Mom was sitting at the dining room table and the bee
+              went down the front of her bathrobe, down her sleeve and you won't
+              be or "bee" surprised, but the bee stung her. Mom's arm was huge
+              where the the bee stung her. Dad's mouth was swelling up with
+              laughter. Everyone in the room was laughing, well everybody except
+              the one who got stung. Mom didn't think it was funny. When I saw
+              her sitting at the table, I stopped laughing and wanted to know
+              how I could help her. We put ice on Mom's arm because her arm was
+              swelling up. Dad was rolling on the floor laughing saying, "I
+              couldn't do that again if I tried!" Every time Dad sees a bee he
+              tells that story. Mom is still not impressed. This is a true story
+              that actually happened to my family. Have you ever had a bee sting
+              before? If you had, you know what to do. Have a nice week.
+            </p>
+          </article>
+        </div>
+      </main>
+      <aside id="sidebar-right">
+        <div class="sidebar-right"></div>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="footer"></div>
+    </footer>
+  </body>
+</html>

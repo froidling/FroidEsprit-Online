@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Water for Life - A Younger Self</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/style/posts.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script src="/script/jQuery.js"></script>
+
+  <script>
+    $.get("/frame/sidebar-left.html", function (data) {
+      $(".sidebar-left").replaceWith(data);
+    });
+    $.get("/frame/post-sidebar.html", function (data) {
+      $(".sidebar-right").replaceWith(data);
+    });
+    $.get("/frame/footer.html", function (data) {
+      $(".footer").replaceWith(data);
+    });
+  </script>
+
+  <body>
+    <div class="container">
+      <aside id="sidebar-left">
+        <div class="sidebar-left"></div>
+      </aside>
+      <!-- Main content for the blog post -->
+      <main>
+        <div>
+          <article>
+            <h1>Water for Life [reupload]</h1>
+            <p class="meta">
+              By a Younger Self |
+              <time datetime="2012-11-27">November 22, 2012</time>
+            </p>
+            <p id="tag-list" class="meta"></p>
+            <script src="/script/postTags.js" defer></script>
+            <p>
+              Hi everybody. I went on a field trip to the HR. Macmillan Space
+              Centre, or as I like to call it, MSC. Did you know that I have a
+              membership there? And that on the bottom floor, well, not the
+              bottom, but in the main lobby, there is a place called the cosmic
+              court yard? In the court yard, there is a rocket simulator. The
+              rocket finds an eon portal and travels back in time and goes to
+              the past Mars. According to theory, in the past, Mars had water
+              and maybe even life. If you are looking for life on Mars, don't
+              expect to find Martians, instead, look for microscopic, heat
+              giving life forms called microbes in the soil. That is what you
+              where supposed to do in the past, Until the Yeti Crab was
+              discovered ( see post Wild Kratts). After that, a whole new world
+              of life was discovered. Ever since, the quest for life turned into
+              the quest for liquid water. Scientists found out that Jupiter's
+              moon, Europa, had oceans underneath the ice. NASA scientists are
+              working on a drilling space probe that can drill under the ice and
+              can turn in to a swimming probe when it gets to the ocean. It
+              might find more life than people on Earth. Back to Mars. Did you
+              know that when NASA sends a rocket for people to go to Mars, they
+              will be working on taming the atmosphere, which will take
+              thousands of years? If we all pitch in and tame Mars's atmosphere,
+              we might have another place, in space. When we got back to school,
+              it was an hour before it was time to go. It was a fun day. Bye.
+            </p>
+          </article>
+        </div>
+      </main>
+      <aside id="sidebar-right">
+        <div class="sidebar-right"></div>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="footer"></div>
+    </footer>
+  </body>
+</html>

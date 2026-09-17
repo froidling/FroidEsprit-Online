@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>New smart TV - A Younger Self</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/style/posts.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script src="/script/jQuery.js"></script>
+
+  <script>
+    $.get("/frame/sidebar-left.html", function (data) {
+      $(".sidebar-left").replaceWith(data);
+    });
+    $.get("/frame/post-sidebar.html", function (data) {
+      $(".sidebar-right").replaceWith(data);
+    });
+    $.get("/frame/footer.html", function (data) {
+      $(".footer").replaceWith(data);
+    });
+  </script>
+
+  <body>
+    <div class="container">
+      <aside id="sidebar-left">
+        <div class="sidebar-left"></div>
+      </aside>
+      <!-- Main content for the blog post -->
+      <main>
+        <div>
+          <article>
+            <h1>New smart TV [reupload]</h1>
+            <p class="meta">
+              By a Younger Self |
+              <time datetime="2012-10-22">October 22, 2012</time>
+            </p>
+            <p id="tag-list" class="meta"></p>
+            <script src="/script/postTags.js" defer></script>
+            <p>
+              Yesterday I was telling you that the Connect Pro workers were here
+              to set up the new TV. Today I got to use it for the first time. I
+              said used, not watched because it is much more than a TV. It is a
+              computer too. It has special 3d features even if it is just a 2d
+              show. The main menu on the main remote is called the smart hub. It
+              is pretty much the brain of the TV. On the smart hub there is a
+              kids section and a fitness section and even a section called
+              Samsung Apps where you can download applications for your
+              television. Other icons on the smart hub are YouTube and Netflix.
+              To get to the 3d section you have to do the smart hub in order to
+              find it. It is a Samsung App. Today, I downloaded khan academy
+              (see post #3) but it isn't just any khan academy, it is called the
+              khan academy education. Dad bought a keyboard that goes with the
+              TV. Soon I am going to be able to do my blog on it. Can you
+              believe it. First, desktop, then laptop, then Mom's tab and now
+              the TV (If you think me I am doing my blog on the TV, you are
+              wrong. I am doing my blog on the desktop) Dad and Jason were
+              watching "How to Train Your Dragon" on the smart TV, but now Dad
+              is trying how to figure out how to hook up the wireless keyboard
+              to the TV. It has to be some sort of sensor like the wii remote
+              and the sensor bar which makes the cursor appear. I have to learn
+              more about how to use the TV so I can teach Mom and Dad. For one
+              thing I know that we can go to Samsung Apps which I told you
+              earlier. Did you know Mom's Samsung Galaxy Tab acts like a remote
+              to the Samsung Smart TV because they are both Samsung? Pretty
+              Cool. Below is a picture of me pointing at the khan academy App I
+              uploaded. Good night.
+            </p>
+          </article>
+        </div>
+      </main>
+      <aside id="sidebar-right">
+        <div class="sidebar-right"></div>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="footer"></div>
+    </footer>
+  </body>
+</html>
